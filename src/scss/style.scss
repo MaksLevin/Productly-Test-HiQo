@@ -1,3 +1,47 @@
-body {
-  background-color: gray;
+@import "colors/colors.scss";
+@import "buttons/button.scss";
+
+@mixin headings {
+  color: $brown-text-h;
 }
+
+body {
+  background-color: $gray-bg;
+  font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+  @include headings;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+}
+
+h4 {
+  @include headings;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+h5 {
+  @include headings;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+h6 {
+  @include headings;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $brown-text-p;
+}
+
