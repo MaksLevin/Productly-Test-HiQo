@@ -1,6 +1,5 @@
 //main module
 import gulp from 'gulp';
-import htmlhint from 'gulp-htmlhint';
 
 //import path
 import { path } from './gulp/config/path.js';
@@ -22,10 +21,6 @@ import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { plugins } from './gulp/config/plugins.js';
 
-//htmlhint
-gulp.src("./src/*.html").pipe(htmlhint())
-
-
 //watcher of changes
 function watcher() {
     gulp.watch(path.watch.files, copy);
@@ -41,4 +36,4 @@ const mainTasks = gulp.parallel(copy, html, scss, js, images);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
 //default execution
-gulp.task('default', dev)
+gulp.task('default', dev);
