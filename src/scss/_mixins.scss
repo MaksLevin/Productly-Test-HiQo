@@ -7,7 +7,7 @@
 
 @mixin button ($width: 110px, $height: 46px, $border-radius: 3px,) {
   @include fonts-style(16px, 700, 24px, $basic-state-text);
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-family;
   width: $width;
   height: $height;
   border: none;
@@ -25,11 +25,10 @@
   }
 }
 
-
-$sizes: ("xs":480px, "md":768px, "xl":1200px);
+$grid-breakpoints: ("xs":480px, "md":768px, "xl":1200px);
 
 @mixin media($minmax, $media) {
-  @each $size, $resolution in $sizes {
+  @each $size, $resolution in $grid-breakpoints {
     @if $media == $size {
       @media only screen and (#{$minmax}-width: $resolution) {
         @content;

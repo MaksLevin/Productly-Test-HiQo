@@ -1,7 +1,7 @@
 .button {
 
   &-basic {
-    @include button (110px, 46px);
+    @include button ($button-width-small,$button-height-small);
     font-weight: 600;
     color: $basic-state-dark;
     background-color: $basic-state-background;
@@ -9,11 +9,11 @@
   }
 
   &-accent {
-    @include button (175px, 53px);
+    @include button ($button-width-big, $button-height-big);
 
     &-header {
-      width: 110px;
-      height: 46px;
+      width: $button-width-small;
+      height: $button-height-small;
     }
   }
 }
