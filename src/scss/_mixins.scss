@@ -1,18 +1,16 @@
-@mixin fonts-style($font-size: 16px, $font-weight: 500, $line-height: 26px, $color: $basic-state-text) {
+@mixin fonts-style($font-size: 16px, $font-weight: 500, $line-height: 26px, $color: $basic-state-text, $font-family: $fonts-family) {
   color: $color;
+  font-family: $font-family;
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height;
 }
 
 @mixin button ($width: 110px, $height: 46px, $border-radius: 3px,) {
-  @include fonts-style(16px, 700, 24px, $basic-state-text);
-  font-family: $font-family;
   width: $width;
   height: $height;
   border: none;
   border-radius: $border-radius;
-  background-color: $accent-state;
   cursor: pointer;
 
   &:hover {

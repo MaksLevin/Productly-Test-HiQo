@@ -1,15 +1,17 @@
 .button {
-
   &-basic {
+    @include fonts-style(16px, 600, 24px, $basic-state-text);
     @include button ($button-width-small,$button-height-small);
-    font-weight: 600;
     color: $basic-state-dark;
     background-color: $basic-state-background;
     border: 1px solid $basic-state-light;
   }
 
   &-accent {
+    @include fonts-style(16px, 700, 24px, $basic-state-text);
     @include button ($button-width-big, $button-height-big);
+    background-color: $accent-state;
+
 
     &-header {
       width: $button-width-small;

@@ -6,6 +6,5 @@
 
 body {
   @include fonts-style (16px, 500, 26px, $basic-state-text);
-  font-family: $font-family;
   background-color: $basic-state-background;
 }
