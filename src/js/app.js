@@ -14,5 +14,3 @@ function isWebp() {
 };
 
 isWebp();
-
-console.log('hello');
