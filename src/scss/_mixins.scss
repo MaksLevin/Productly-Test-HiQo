@@ -1,18 +1,39 @@
-@mixin button {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  border: none;
-  border-radius: 3px;
-  color: $basic-white;
-  background-color: $accent;
-  cursor: pointer;
-}
-
-@mixin headings($font-size: 36px, $font-weight: 600, $line-height: 54px,) {
-  color: $basic-heading;
+@mixin fonts-style($font-size: 16px, $font-weight: 500, $line-height: 26px, $color: $basic-state-text) {
+  color: $color;
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height;
+}
+
+@mixin button ($width: 110px, $height: 46px, $border-radius: 3px,) {
+  @include fonts-style(16px, 700, 24px, $basic-state-text);
+  font-family: 'Poppins', sans-serif;
+  width: $width;
+  height: $height;
+  border: none;
+  border-radius: $border-radius;
+  background-color: $accent-state;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+
+
+$sizes: ("xs":480px, "md":768px, "xl":1200px);
+
+@mixin media($minmax, $media) {
+  @each $size, $resolution in $sizes {
+    @if $media == $size {
+      @media only screen and (#{$minmax}-width: $resolution) {
+        @content;
+      }
+    }
+  }
 }

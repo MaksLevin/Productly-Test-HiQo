@@ -1,6 +1,11 @@
 @import "_fonts.scss";
 @import "_mixins.scss";
 @import "colors/_colors.scss";
-@import "common/_common.scss";
 @import "buttons/_button.scss";
-@import "headings/_headings.scss";
+@import "text/_text.scss";
+
+.common-style {
+  @include fonts-style (16px, 500, 26px, $basic-state-text);
+  font-family: 'Poppins', sans-serif;
+  background-color: $basic-state-background;
+}
