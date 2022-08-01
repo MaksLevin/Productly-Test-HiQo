@@ -24,12 +24,10 @@
     display: flex;
     justify-content: flex-end;
     gap: 25px;
-    list-style: none;
   }
 
   &-item {
     @include fonts-style (14px, 400, 28px, $accent-state-text);
-    text-decoration:none;
 
     &:hover{
       color: $primary-state-text;
@@ -62,7 +60,7 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #616161;
+      background-color: $accent-state-background;
       transition-duration: .25s;
     }
 
@@ -86,20 +84,16 @@
       height: 100%;
       margin: 0;
       padding: 80px 0;
-      list-style: none;
       text-align: center;
-      background-color: #ECEFF1;
+      background-color: $primary-state-background;
       box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
       transition-duration: .25s;
     }
  
     &-item {
+      @include fonts-style (22px, 600, 33px, $accent-state-text);
       display: block;
       padding: 12px 24px;
-      color: #333;
-      font-family: 'Roboto', sans-serif;
-      font-size: 20px;
-      font-weight: 600;
       text-decoration: none;
       transition-duration: .25s;
 
