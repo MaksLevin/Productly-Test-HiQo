@@ -29,10 +29,11 @@
         
         @include fonts-style(10px, 500, 20px, $basic-state-text);
       }
+    }
 
-      @include media("max", "xs") {
-        margin-left: 0;
-      }
+    &-footer {
+      width: $button-width-medium;
+      height: $button-height-medium;
     }
   }
 }

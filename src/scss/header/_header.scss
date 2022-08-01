@@ -35,6 +35,8 @@
   }
 
   @include media("max", "md") {
+    flex-grow: 0;
+    order: 1;
 
     #menu-toggle {
       display: block;
@@ -44,8 +46,8 @@
     &-button {
       display: flex; 
       align-items: center; 
-      position: fixed;
-      top: 30px;
+      position: relative;
+      top: 10px;
       right: 20px;
       width: 26px;
       height: 26px;
@@ -53,9 +55,9 @@
       z-index: 1;
     }
 
-    .menu-button > span,
-    .menu-button > span::before,
-    .menu-button > span::after {
+    .menu-button > .menu-icon,
+    .menu-button > .menu-icon::before,
+    .menu-button > .menu-icon::after {
       display: block;
       position: absolute;
       width: 100%;
@@ -64,12 +66,12 @@
       transition-duration: .25s;
     }
 
-    .menu-button> span::before {
+    .menu-button> .menu-icon::before {
       content: "";
       top: -8px;
     }
 
-    .menu-button > span::after {
+    .menu-button > .menu-icon::after {
       content: "";
       top: 8px;
     }
@@ -104,13 +106,13 @@
 
   @include media("max", "sm") {
     &-button {
-      top: 23px;
+      top: -6px;
     }
   }
 
   @include media("max", "xs") {
     &-button {
-      right: 18px;
+      right: 6px;
     }
   }
 }
@@ -120,12 +122,21 @@
 
   @include media("max", "md") {
     margin-right: 45px;
+    flex-grow: 2;
+    display: flex;
+    justify-content: end;
   }
 
-  @include media("max", "xs") {
+  @include media("max", "sm") {
     flex-grow: 3;
     margin-right: 8px;
     margin-left: 0px;
+    justify-content: center;
+    align-self: center;
+  }
+
+  @include media("max", "xs") {
+
   }
 }
 
@@ -133,14 +144,14 @@
   display: none;
 }
 
-#menu-toggle:checked ~ .menu-button > span {
+#menu-toggle:checked ~ .menu-button > .menu-icon {
   transform: rotate(45deg);
 }
-#menu-toggle:checked ~ .menu-button > span::before {
+#menu-toggle:checked ~ .menu-button > .menu-icon::before {
   top: 0px;
   transform: rotate(0);
 }
-#menu-toggle:checked ~ .menu-button > span::after {
+#menu-toggle:checked ~ .menu-button > .menu-icon::after {
   top: 0px;
   transform: rotate(90deg);
 }
