@@ -65,12 +65,12 @@
     }
 
     .menu-button> span::before {
-      content: '';
+      content: "";
       top: -8px;
     }
 
     .menu-button > span::after {
-      content: '';
+      content: "";
       top: 8px;
     }
 
@@ -78,12 +78,12 @@
       display: block;
       position: fixed;
       visibility: hidden;
-      top: 0;
+      top: 0px;
       left: -100%;
       width: 285px;
       height: 100%;
       margin: 0;
-      padding: 80px 0;
+      padding: 80px 0px;
       text-align: center;
       background-color: $primary-state-background;
       box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
@@ -94,11 +94,10 @@
       @include fonts-style (22px, 600, 33px, $accent-state-text);
       display: block;
       padding: 12px 24px;
-      text-decoration: none;
       transition-duration: .25s;
 
       &:hover {
-        background-color: #CFD8DC;
+        background-color: $accent-state-background-light;
       }
     }
   }
@@ -111,7 +110,6 @@
 
   @include media("max", "xs") {
     &-button {
-
       right: 18px;
     }
   }
@@ -127,7 +125,7 @@
   @include media("max", "xs") {
     flex-grow: 3;
     margin-right: 8px;
-    margin-left: 0;
+    margin-left: 0px;
   }
 }
 
@@ -139,14 +137,14 @@
   transform: rotate(45deg);
 }
 #menu-toggle:checked ~ .menu-button > span::before {
-  top: 0;
+  top: 0px;
   transform: rotate(0);
 }
 #menu-toggle:checked ~ .menu-button > span::after {
-  top: 0;
+  top: 0px;
   transform: rotate(90deg);
 }
 #menu-toggle:checked ~ .menu-list {
   visibility: visible;
-  left: 0;
+  left: 0px;
 }
