@@ -5,6 +5,12 @@
     color: $basic-state-dark;
     background-color: $basic-state-background;
     border: 1px solid $basic-state-light;
+
+    @include media("max", "sm") {
+      width: $button-width-screen-sm;
+      height: $button-height-screen-sm;
+      @include fonts-style(10px, 500, 20px, $basic-state-dark);
+    }
   }
 
   &-accent {
@@ -12,10 +18,20 @@
     @include button ($button-width-big, $button-height-big);
     background-color: $accent-state;
 
-
     &-header {
       width: $button-width-small;
       height: $button-height-small;
+      margin-left: 10px;
+
+      @include media("max", "sm") {
+        width: $button-width-screen-sm;
+        height: $button-height-screen-sm;
+        @include fonts-style(10px, 500, 20px, $basic-state-text);
+      }
+
+      @include media("max", "xs") {
+        margin-left: 0;
+      }
     }
   }
 }

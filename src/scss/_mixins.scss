@@ -23,7 +23,7 @@
   }
 }
 
-$grid-breakpoints: ("xs":480px, "md":768px, "xl":1200px);
+$grid-breakpoints: ("xs":426px, "sm":569px, "md":859px, "xl":1200px);
 
 @mixin media($minmax, $media) {
   @each $size, $resolution in $grid-breakpoints {
