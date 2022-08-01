@@ -1,8 +1,11 @@
 @import "_fonts.scss";
 @import "_mixins.scss";
 @import "variables/_variables.scss";
+@import "_normalize.scss";
 @import "buttons/_button.scss";
 @import "text/_text.scss";
+@import "wrappers/_wrappers.scss";
+@import "header/_header.scss";
 
 body {
   @include fonts-style (16px, 500, 26px, $basic-state-text);

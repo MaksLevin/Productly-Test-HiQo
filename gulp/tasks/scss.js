@@ -16,7 +16,7 @@ export const scss = () => {
     .pipe(groupCssMediaQueries())
     .pipe(webpcss({
         webpClass: '.webp',
-        noWebpClass: '.no-webp'   
+        noWebpClass: '.no-webp'
     }))
     .pipe(autoprefixer({
         grid: true,
