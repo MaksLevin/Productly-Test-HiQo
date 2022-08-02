@@ -19,11 +19,11 @@
 
   &:active {
     opacity: 1;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 25%));
   }
 }
 
-$grid-breakpoints: ("xs":426px, "sm":569px, "md":859px, "xl":1200px);
+$grid-breakpoints: ("xs":426px, "sm":569px, "md":859px, "lg": 1030px, "xl":1200px);
 
 @mixin media($minmax, $media) {
   @each $size, $resolution in $grid-breakpoints {
