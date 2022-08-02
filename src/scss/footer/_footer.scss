@@ -31,41 +31,39 @@
   }
 }
 
-.footer-menu-item, 
+.footer-menu-item,
 .documents-menu-item {
   @include fonts-style (16px, 400, 35px, $primary-state-text);
 
   @include media("max", "md") {
-    
     @include fonts-style (12px, 400, 22px, $primary-state-text);
   }
 
   @include media("max", "xs") {
-    
     @include fonts-style (8px, 400, 16px, $primary-state-text);
   }
 }
 
-#footer-menu-tab, 
+#footer-menu-tab,
 #documents-menu-tab {
   display: none;
 }
 
 @include media("max", "md") {
-  .footer-menu, 
+  .footer-menu,
   .documents-menu {
     position: relative;
   }
-  
-  .footer-menu input, 
-  .footer-menu-list { 
+
+  .footer-menu input,
+  .footer-menu-list {
     display: none;
   }
-  
+
   .tab-title {
     cursor: pointer;
   }
-  
+
   .tab-title::after {
     content: "";
     position: absolute;
@@ -85,28 +83,28 @@
       border-right: 3px solid transparent;
     }
   }
-  
+
   .footer-menu :checked + .tab-title::after {
     content: "";
     transform: rotate(180deg);
   }
-  
+
   .footer-menu :checked ~ .footer-menu-list {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
-  .documents-menu input, 
-  .documents-menu-list { 
+
+  .documents-menu input,
+  .documents-menu-list {
     display: none;
   }
-  
+
   .documents-menu :checked + .tab-title::after {
     content: "";
     transform: rotate(180deg);
   }
-  
+
   .documents-menu :checked ~ .documents-menu-list {
     display: flex;
     flex-direction: column;
@@ -134,7 +132,7 @@
 
 .feedback {
   width: 325px;
-  
+
   @include media("max", "md") {
     width: 230px;
   }

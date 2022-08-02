@@ -11,6 +11,6 @@
 
 body {
   @include fonts-style (16px, 500, 26px, $basic-state-text);
-  
+
   background-color: $basic-state-background;
 }

@@ -6,9 +6,11 @@
     color: $basic-state-dark;
     background-color: $basic-state-background;
     border: 1px solid $basic-state-light;
+
     @include media("max", "sm") {
       width: $button-width-screen-sm;
       height: $button-height-screen-sm;
+
       @include fonts-style(10px, 500, 20px, $basic-state-dark);
     }
   }
@@ -16,7 +18,7 @@
   &-accent {
     @include fonts-style(16px, 700, 24px, $basic-state-text);
     @include button ($button-width-big, $button-height-big);
-    
+
     background-color: $accent-state;
 
     &-header {
@@ -27,7 +29,7 @@
       @include media("max", "sm") {
         width: $button-width-screen-sm;
         height: $button-height-screen-sm;
-        
+
         @include fonts-style(10px, 500, 20px, $basic-state-text);
       }
     }
@@ -39,7 +41,7 @@
       @include media("max", "sm") {
         width: $button-width-screen-sm;
         height: $button-height-screen-sm;
-        
+
         @include fonts-style(10px, 500, 12px, $basic-state-text);
       }
     }
@@ -50,34 +52,34 @@
         height: $button-height-small;
 
         @include fonts-style(14px, 500, 22px, $basic-state-text);
-      } 
+      }
 
       @include media("max", "sm") {
         width: $button-width-screen-sm;
         height: $button-height-screen-sm;
 
         @include fonts-style(10px, 500, 12px, $basic-state-text);
-      } 
+      }
     }
   }
 
   &-link {
     @include fonts-style(16px, 600, 24px, $accent-state);
-    
+
     text-decoration: underline;
 
     &-started {
       position: relative;
       margin-left: 50px;
 
-      @include media("max", "sm") {     
+      @include media("max", "sm") {
         margin-left: 25px;
       }
     }
 
     &-started::before {
       content: "";
-      background-image: url(../img/triangle.svg);
+      background-image: url("../img/triangle.svg");
       background-repeat: no-repeat;
       width: 25px;
       height: 25px;
@@ -85,7 +87,7 @@
       top: 2px;
       left: -24px;
 
-      @include media("max", "sm") {     
+      @include media("max", "sm") {
         background-size: 12px;
         top: 2px;
         left: -20px;
