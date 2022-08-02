@@ -6,7 +6,7 @@
   line-height: $line-height;
 }
 
-@mixin button ($width: 110px, $height: 46px, $border-radius: 3px,) {
+@mixin button($width: 110px, $height: 46px, $border-radius: 3px,) {
   width: $width;
   height: $height;
   border: none;

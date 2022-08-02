@@ -24,20 +24,64 @@
   }
 }
 
-.footer-menu-list {
-  @include media("max", "md") {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .footer-menu-item {
   @include fonts-style (16px, 400, 35px, $primary-state-text);
 }
 
-.documents-menu-list {
-  @include media("max", "md") {
+#footer-menu-tab, 
+#documents-menu-tab {
+  display: none;
+}
+
+@include media("max", "md") {
+  .footer-menu, 
+  .documents-menu {
+    position: relative;
+  }
+  
+  .footer-menu input, 
+  .footer-menu-list { 
+    display: none;
+  }
+  
+  .tab-title {
+    cursor: pointer;
+  }
+  
+  .tab-title::after {
+    content: "";
+    position: absolute;
+    right: -17px;
+    top: 35px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid $primary-state-text;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+  
+  .footer-menu :checked + .tab-title::after {
+    content: "";
+    transform: rotate(180deg);
+  }
+  
+  .footer-menu :checked ~ .footer-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .documents-menu input, 
+  .documents-menu-list { 
+    display: none;
+  }
+  
+  .documents-menu :checked + .tab-title::after {
+    content: "";
+    transform: rotate(180deg);
+  }
+  
+  .documents-menu :checked ~ .documents-menu-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,13 +95,13 @@
 .footer-title {
   margin-bottom: 50px;
 
-  &-modified{
+  &-modified {
     margin-bottom: 40px;
   }
 
   @include media("max", "md") {
-     margin-top: 20px;
-     margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 

@@ -29,7 +29,7 @@
   &-item {
     @include fonts-style (14px, 400, 28px, $accent-state-text);
 
-    &:hover{
+    &:hover {
       color: $primary-state-text;
     }
   }
@@ -66,7 +66,7 @@
       transition-duration: .25s;
     }
 
-    .menu-button> .menu-icon::before {
+    .menu-button > .menu-icon::before {
       content: "";
       top: -8px;
     }
@@ -91,9 +91,10 @@
       box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
       transition-duration: .25s;
     }
- 
+    
     &-item {
       @include fonts-style (22px, 600, 33px, $accent-state-text);
+
       display: block;
       padding: 12px 24px;
       transition-duration: .25s;
@@ -134,10 +135,6 @@
     justify-content: center;
     align-self: center;
   }
-
-  @include media("max", "xs") {
-
-  }
 }
 
 #menu-toggle {
@@ -147,14 +144,17 @@
 #menu-toggle:checked ~ .menu-button > .menu-icon {
   transform: rotate(45deg);
 }
+
 #menu-toggle:checked ~ .menu-button > .menu-icon::before {
   top: 0px;
   transform: rotate(0);
 }
+
 #menu-toggle:checked ~ .menu-button > .menu-icon::after {
   top: 0px;
   transform: rotate(90deg);
 }
+
 #menu-toggle:checked ~ .menu-list {
   visibility: visible;
   left: 0px;
