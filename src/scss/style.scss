@@ -6,8 +6,10 @@
 @import "text/_text.scss";
 @import "wrappers/_wrappers.scss";
 @import "header/_header.scss";
+@import "footer/_footer.scss";
 
 body {
   @include fonts-style (16px, 500, 26px, $basic-state-text);
+  
   background-color: $basic-state-background;
 }
