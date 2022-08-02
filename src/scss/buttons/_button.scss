@@ -34,6 +34,13 @@
     &-footer {
       width: $button-width-medium;
       height: $button-height-medium;
+
+      @include media("max", "sm") {
+        width: $button-width-screen-sm;
+        height: $button-height-screen-sm;
+        
+        @include fonts-style(10px, 500, 12px, $basic-state-text);
+      }
     }
   }
 }

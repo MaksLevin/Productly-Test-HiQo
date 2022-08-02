@@ -7,6 +7,13 @@
   @include media("max", "md") {
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
+  }
+
+  @include media("max", "xs") {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
   }
 }
 
@@ -15,17 +22,28 @@
 
   @include media("max", "md") {
     align-self: center;
-    width: 50%;
+    width: 25%;
   }
 
   @include media("max", "xs") {
     align-self: center;
-    width: 100%;
+    width: 30%;
   }
 }
 
-.footer-menu-item {
+.footer-menu-item, 
+.documents-menu-item {
   @include fonts-style (16px, 400, 35px, $primary-state-text);
+
+  @include media("max", "md") {
+    
+    @include fonts-style (12px, 400, 22px, $primary-state-text);
+  }
+
+  @include media("max", "xs") {
+    
+    @include fonts-style (8px, 400, 16px, $primary-state-text);
+  }
 }
 
 #footer-menu-tab, 
@@ -51,13 +69,21 @@
   .tab-title::after {
     content: "";
     position: absolute;
-    right: -17px;
-    top: 35px;
+    right: -15px;
+    top: 21px;
     width: 0;
     height: 0;
-    border-top: 7px solid $primary-state-text;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
+    border-top: 5px solid $primary-state-text;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    @include media("max", "xs") {
+      right: -9px;
+      top: 15px;
+      border-top: 3px solid $primary-state-text;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+    }
   }
   
   .footer-menu :checked + .tab-title::after {
@@ -88,10 +114,6 @@
   }
 }
 
-.documents-menu-item {
-  @include fonts-style (16px, 400, 35px, $primary-state-text);
-}
-
 .footer-title {
   margin-bottom: 50px;
 
@@ -100,8 +122,13 @@
   }
 
   @include media("max", "md") {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  @include media("max", "xs") {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 
@@ -131,7 +158,16 @@
   border-radius: 4px;
 
   &::placeholder {
-    color: $basic-state-light;
+    @include fonts-style (15px, 400, 26px, $basic-state-light);
+  }
+
+  @include media("max", "xs") {
+    padding: 6px;
+    margin-bottom: 10px;
+
+    &::placeholder {
+      @include fonts-style (12px, 400, 22px, $basic-state-light);
+    }
   }
 }
 
