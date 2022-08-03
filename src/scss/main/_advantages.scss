@@ -75,13 +75,16 @@
 
     @include media("max", "md") {
       width: 45px;
+      margin-bottom: 20px;
     }
 
     @include media("max", "sm") {
       width: 35px;
+      margin-bottom: 15px;
     }
 
     @include media("max", "xs") {
+      margin-bottom: 5px;
       width: 25px;
     }
   }
@@ -99,6 +102,7 @@
 
     @include media("max", "xs") {
       width: 150px;
+      margin: 0;
     }
   }
 }
