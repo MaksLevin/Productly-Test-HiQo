@@ -65,6 +65,7 @@
     &-advantages {
       text-transform: uppercase;
       align-self: center;
+      margin-bottom: 90px;
 
       @include media("max", "md") {
         width: $button-width-small;
