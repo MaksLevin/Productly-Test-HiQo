@@ -50,6 +50,18 @@
 
 .small-sub-title {
   @include fonts-style (16px, 700, 26px, $accent-state-text);
+
+  @include media("max", "md") {
+    @include fonts-style (12px, 700, 20px, $accent-state-text);
+  }
+
+  @include media("max", "sm") {
+    @include fonts-style (10px, 700, 18px, $accent-state-text);
+  }
+
+  @include media("max", "xs") {
+    @include fonts-style (8px, 700, 16px, $accent-state-text);
+  }
 }
 
 .common-text {
