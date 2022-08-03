@@ -63,6 +63,10 @@
 
   &-icon {
     margin-bottom: 30px;
+
+    @include media("max", "xs") {
+      width: 35px;
+    }
   }
 
   &-common-text {
