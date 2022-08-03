@@ -22,12 +22,20 @@
     margin-bottom: 50px;
     align-self: center;
 
+    @include media("max", "md") {
+      margin-top: 70px;
+    }
+
     @include media("max", "sm") {
       width: 400px;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
 
     @include media("max", "xs") {
       width: 200px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 
@@ -46,6 +54,12 @@
       justify-content: space-around;
       gap: 10px;
     }
+
+    @include media("max", "xs") {
+      justify-content: space-around;
+      gap: 5px;
+      margin-bottom: 15px;
+    }
   }
 
   &-item {
@@ -59,8 +73,16 @@
   &-icon {
     margin-bottom: 30px;
 
-    @include media("max", "xs") {
+    @include media("max", "md") {
+      width: 45px;
+    }
+
+    @include media("max", "sm") {
       width: 35px;
+    }
+
+    @include media("max", "xs") {
+      width: 25px;
     }
   }
 
