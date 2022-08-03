@@ -18,6 +18,18 @@
 
 .title {
   @include fonts-style (36px, 700, 54px, $accent-state-text);
+
+  @include media("max", "md") {
+    @include fonts-style (24px, 700, 34px, $accent-state-text);
+  }
+
+  @include media("max", "sm") {
+    @include fonts-style (16px, 700, 26px, $accent-state-text);
+  }
+
+  @include media("max", "xs") {
+    @include fonts-style (10px, 700, 16px, $accent-state-text);
+  }
 }
 
 .sub-title {
