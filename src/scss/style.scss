@@ -10,6 +10,7 @@
 @import "main/_getStarted.scss";
 @import "main/_advantages.scss";
 @import "main/_ourTasks.scss";
+@import "main/_articleSlider.scss";
 
 body {
   @include fonts-style (16px, 500, 26px, $basic-state-text);

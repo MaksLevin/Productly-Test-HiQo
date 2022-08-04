@@ -1,0 +1,139 @@
+.aticle-slider {
+  &-text {
+    margin-bottom: 55px;
+
+    @include media("max", "xl") {
+      text-align: center;
+    }
+
+    @include media("max", "md") {
+      margin-bottom: 45px;
+    }
+
+    @include media("max", "sm") {
+      margin-bottom: 30px;
+    }
+
+    @include media("max", "xs") {
+      margin-bottom: 15px;
+    }
+  }
+
+  &-title {
+    @include media("max", "xl") {
+      text-align: center;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @include media("max", "xl") {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  @include media("max", "md") {
+    gap: 20px;
+  }
+
+  @include media("max", "sm") {
+    gap: 15px;
+  }
+
+  &-item {
+    width: 350px;
+
+    @include media("max", "md") {
+      width: 300px;
+    }
+
+    @include media("max", "sm") {
+      width: 250px;
+    }
+  }
+
+  &-image {
+    width: 340px;
+
+    @include media("max", "md") {
+      width: 300px;
+    }
+
+    @include media("max", "sm") {
+      display: block;
+      width: 250px;
+    }
+  }
+
+  &-sub-title {
+    width: 300px;
+
+    @include media("max", "sm") {
+      width: 250px;
+    }
+
+    @include media("max", "xs") {
+      width: 200px;
+    }
+
+    &:hover {
+      color: $accent-state;
+      transition-duration: 0.25s;
+    }
+  }
+
+  &-dots {
+    margin-top: 45px;
+    margin-bottom: 120px;
+    text-align: center;
+
+    @include media("max", "md") {
+      margin-top: 35px;
+      margin-bottom: 90px;
+    }
+
+    @include media("max", "sm") {
+      margin-top: 25px;
+      margin-bottom: 50px;
+    }
+
+    @include media("max", "xs") {
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+
+    &-item {
+      cursor: pointer;
+      height: 16px;
+      width: 16px;
+      margin: 0 2px;
+      background-color: $primary-state-background;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+
+      @include media("max", "sm") {
+        height: 14px;
+        width: 14px;
+      }
+
+      @include media("max", "xs") {
+        height: 12px;
+        width: 12px;
+      }
+
+      &:hover {
+        background-color: $accent-state;
+      }
+    }
+  }
+}
+
+.active {
+  background-color: $accent-state;
+}
