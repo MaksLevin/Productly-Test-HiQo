@@ -4,7 +4,7 @@
     @include button ($button-width-small,$button-height-small);
 
     color: $basic-state-dark;
-    background-color: $basic-state-background;
+    background-color: $basic-state-text;
     border: 1px solid $basic-state-light;
 
     @include media("max", "sm") {
@@ -70,7 +70,7 @@
       @include media("max", "md") {
         width: $button-width-small;
         height: $button-height-small;
-        margin-bottom: 60px;
+        margin-bottom: 15px;
 
         @include fonts-style(14px, 500, 22px, $basic-state-text);
       }
@@ -78,13 +78,13 @@
       @include media("max", "sm") {
         width: $button-width-screen-sm;
         height: $button-height-screen-sm;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
 
         @include fonts-style(10px, 500, 12px, $basic-state-text);
       }
 
-      @include media("max", "sm") {
-        margin-bottom: 15px;
+      @include media("max", "xs") {
+        margin-bottom: 0;
       }
     }
   }

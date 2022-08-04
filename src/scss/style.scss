@@ -7,11 +7,12 @@
 @import "wrappers/_wrappers.scss";
 @import "header/_header.scss";
 @import "footer/_footer.scss";
-@import "main/getStarted.scss";
-@import "main/advantages.scss";
+@import "main/_getStarted.scss";
+@import "main/_advantages.scss";
+@import "main/_ourTasks.scss";
 
 body {
   @include fonts-style (16px, 500, 26px, $basic-state-text);
 
-  background-color: $basic-state-background;
+  background-color: $basic-state-text;
 }
