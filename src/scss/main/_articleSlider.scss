@@ -27,22 +27,26 @@
 }
 
 .slider {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-
-  @include media("max", "xl") {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  @include media("max", "md") {
+  &-list {
+    display: flex;
+    justify-content: space-between;
     gap: 20px;
-  }
+    animation-name: fade;
+    animation-duration: 1.5s;
 
-  @include media("max", "sm") {
-    gap: 15px;
+    @include media("max", "xl") {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    @include media("max", "md") {
+      gap: 20px;
+    }
+
+    @include media("max", "sm") {
+      gap: 15px;
+    }
   }
 
   &-item {
@@ -136,4 +140,13 @@
 
 .active {
   background-color: $accent-state;
+}
+
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
 }
