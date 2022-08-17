@@ -15,7 +15,7 @@ function isWebp() {
 
 isWebp();
 
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function currentSlide(n) {
@@ -23,9 +23,9 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("slider-list");
-    var dots = document.getElementsByClassName("slider-dots-item");
+    let i;
+    let slides = document.getElementsByClassName("slider-list");
+    let dots = document.getElementsByClassName("slider-dots-item");
     if (n > slides.length) {
       slideIndex = 1
     }
